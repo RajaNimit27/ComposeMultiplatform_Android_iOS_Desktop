@@ -16,6 +16,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import io.kamel.image.KamelImage
+import io.kamel.image.asyncPainterResource
 import models.Products
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
@@ -44,8 +46,8 @@ fun ListScreen(list: List<Products>)
             Row(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
-                Image(
-                    painter = painterResource(res = "compose-multiplatform.xml"),
+                KamelImage(
+                    resource = asyncPainterResource(data = image),
                     contentDescription = null,
                     modifier = Modifier.size(100.dp)
                         .padding(8.dp),

@@ -49,6 +49,7 @@ kotlin {
             implementation(libs.ktor.client.core)
             implementation(libs.kotlin.serialization)
             implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.media.kamel)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
